@@ -1,19 +1,10 @@
 import type { Metadata } from 'next';
-import { Rajdhani, Orbitron } from 'next/font/google';
 import './globals.css';
 import { Toaster } from 'react-hot-toast';
 
-const rajdhani = Rajdhani({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-rajdhani',
-});
-
-const orbitron = Orbitron({
-  subsets: ['latin'],
-  weight: ['700', '900'],
-  variable: '--font-orbitron',
-});
+// Optional: fallback to system fonts if you remove Google Fonts
+const rajdhaniClass = 'font-sans'; // Replace with local font class if using local
+const orbitronClass = 'font-sans'; // Replace with local font class if using local
 
 export const metadata: Metadata = {
   title: 'Langta Premier League — Auction',
@@ -24,15 +15,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className="dark">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
-          rel="stylesheet"
-        />
+        {/* Removed Google Fonts links to prevent SSL issues */}
       </head>
-      <body className={`${rajdhani.variable} ${orbitron.variable} font-rajdhani bg-lpl-dark text-white antialiased`}>
+      <body className={`${rajdhaniClass} ${orbitronClass} bg-lpl-dark text-white antialiased`}>
         {children}
-        <Toaster position="top-right" toastOptions={{ style: { background: '#0A1628', color: '#fff', border: '1px solid rgba(255,215,0,0.3)' } }} />
+        <Toaster
+          position="top-right"
+          toastOptions={{
+            style: { background: '#0A1628', color: '#fff', border: '1px solid rgba(255,215,0,0.3)' },
+          }}
+        />
       </body>
     </html>
   );
