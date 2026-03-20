@@ -13,7 +13,9 @@ An IPL-style premium cricket auction platform built with **Next.js 14**, **Three
 ### Installation
 
 ```bash
-# 1. cd lpl-auction
+# 1. Unzip the project
+unzip lpl-auction.zip
+cd lpl-auction
 
 # 2. Install dependencies
 npm install
