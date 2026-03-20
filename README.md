@@ -165,5 +165,5 @@ Bhubaneswar, Odisha, India
 
 ## ©️ Copyright
 
-© 2025 Langta Premier League. All rights reserved.  
+© 2026 Langta Premier League. All rights reserved.  
 Private tournament use only. Not affiliated with BCCI, IPL, or any official cricket body.
